@@ -3,9 +3,9 @@
 #### 一个对腾讯web地图简单封装的React组件
  **GitHub源码地址：[戳我](https://github.com/yezihaohao/react-qmap)** 
 
- **栗子：[戳我](http://http://cheng_haohao.gitee.io/reactqmap/#/dashboard)**
+ **栗子：[戳我](https://cheng_haohao.gitee.io/reactqmap/#/dashboard)**
 
- **栗子源码：[戳我](http://https://github.com/yezihaohao/react-qmap/tree/master/examples/src/components/maps)**  
+ **栗子源码：[戳我](https://github.com/yezihaohao/react-qmap/tree/master/examples/src/components/maps)**  
 
 ![demo截图](https://gitee.com/uploads/images/2018/0309/104835_eb43478e_876197.gif "t.gif")
 
