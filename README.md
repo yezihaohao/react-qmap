@@ -7,7 +7,7 @@
 
  **栗子源码：[戳我](https://github.com/yezihaohao/react-qmap/tree/master/examples/src/components/maps)**  
 
-![demo截图](https://gitee.com/uploads/images/2018/0309/104835_eb43478e_876197.gif "t.gif")
+![demo截图](https://raw.githubusercontent.com/yezihaohao/react-qmap/master/examples/src/styles/t.gif)
 
  **安装**
 ```
