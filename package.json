@@ -2,6 +2,15 @@
   "name": "react-qmap",
   "version": "0.1.1",
   "description": "react qqmap component",
+  "keywords": ["react", "map", "react-map"],
+  "homepage": "https://github.com/yezihaohao/react-qmap",
+  "bugs": {
+    "url": "https://github.com/yezihaohao/react-qmap/issues"
+  },
+  "repository" :{ 
+    "type" : "git", 
+    "url" : "https://github.com/yezihaohao/react-qmap"
+  },
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
