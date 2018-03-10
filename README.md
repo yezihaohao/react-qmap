@@ -35,15 +35,15 @@ getMap   | function | false |  |  获取地图的对象和当前容器的map对�
 style   | object| false |  |  设置组件的内联样式，默认样式width: '100%', height: '100%'
 className   | string| false |  |  设置组件的class
 mySpot   | object| false |  |  设置地图的定位坐标
-initialOptions   | object| false | zoom: 14,disableDefaultUI: true, zoomControl: false,mapTypeControl: false, |  初始化地图的参数，简单默认设置了几个，更多的初始化参数请参照[文档](http://http://lbs.qq.com/javascript_v2/doc/mapoptions.html)
-apiKey   | string| true |  |  设置地图引用的key,为防止限制调用API,建议[官网](http://http://lbs.qq.com/index.html)申请自己的key
+initialOptions   | object| false | zoom: 14,disableDefaultUI: true, zoomControl: false,mapTypeControl: false, |  初始化地图的参数，简单默认设置了几个，更多的初始化参数请参照[文档](http://lbs.qq.com/javascript_v2/doc/mapoptions.html)
+apiKey   | string| true |  |  设置地图引用的key,为防止限制调用API,建议[官网](http://lbs.qq.com/index.html)申请自己的key
 center   | object| true |  |  设置地图初始化的中心位置坐标
 
 
 #### 关于
 有了初始化的地图，获取到地图对象之后，就可以按照官网提供的资料随心所欲了。
 
-更多关于API的操作请查看腾讯地图官网（[戳我](http://http://lbs.qq.com/javascript_v2/doc/index.html#g0)）
+更多关于API的操作请查看腾讯地图官网（[戳我](http://lbs.qq.com/javascript_v2/doc/index.html#g0)）
 
 简单的封装了一块原石，封装还在继续，如果老铁有更好的方式或想法不妨PR走起一波~会给你双击666
 

@@ -44,7 +44,7 @@ class Dashboard extends Component {
                             </p>
                         </div> */}
                         <small className="d-block text-right mt-3">
-                        <a href="">GitHub</a>
+                        <a href="https://github.com/yezihaohao/react-qmap">GitHub</a>
                         </small>
                     </div>
                 </main>
