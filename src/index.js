@@ -21,6 +21,10 @@ class ReactQMap extends Component {
                 this.map.setCenter(new QMap.LatLng(nextProps.center.latitude, nextProps.center.longitude));
             }
         }
+        // 更新我的定位标记位置
+        if (nextProps.mySpot && JSON.stringify(nextProps.mySpot) !== JSON.stringify(this.props.mySpot)) {
+            this.myPositionMarker.setPosition(new QMap.LatLng(nextProps.mySpot.latitude, nextProps.mySpot.longitude));
+        }
     }
     componentWillUnmount() {
         // 清除所有的监听器
