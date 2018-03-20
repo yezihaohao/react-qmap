@@ -54,7 +54,7 @@ class ReactQMap extends Component {
         getScript("open.map.qq.com/apifiles/2/4/85/main.js");
     }
     _initMap = (props) => {
-        const { center, getMap, initialOptions, mySpot } = props;
+        const { center, getMap, initialOptions, mySpot, getContainer } = props;
         const options = Object.assign({}, INITIALOPTIONS, initialOptions);
         this.map = new QMap.Map(this.container, {
             center: new QMap.LatLng(center.latitude, center.longitude),
@@ -62,6 +62,7 @@ class ReactQMap extends Component {
         });
         getMap && getMap(this.map, QMap);
         mySpot && this._mySpot(new QMap.LatLng(mySpot.latitude, mySpot.longitude));
+        getContainer && getContainer(this.container);
     }
     _mySpot = (position, icon = require('./imgs/my-position_small.png')) => {
         this.myPositionMarker = new QMap.Marker({
@@ -97,6 +98,7 @@ ReactQMap.propTypes = {
     mySpot: PropTypes.object,
     apiKey: PropTypes.string.isRequired,
     center: PropTypes.object.isRequired,
+    getContainer: PropTypes.func,
 }
 
 export default ReactQMap;
