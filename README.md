@@ -13,7 +13,7 @@
 ```
 yarn add react-qmap  
 or npm install react-qmap
-``` 
+```
 
  **基础用法** 
 
@@ -39,6 +39,28 @@ initialOptions   | object| false | zoom: 14,disableDefaultUI: true, zoomControl:
 apiKey   | string| true |  |  设置地图引用的key,为防止限制调用API,建议[官网](http://lbs.qq.com/index.html)申请自己的key
 center   | object| true |  |  设置地图初始化的中心位置坐标
 getContainer   | function| false |  |  获取地图的html dom元素的函数，参数是当前地图挂载的元素DOM
+
+#### 其他框架和库的支持
+
+##### [taro](https://github.com/NervJS/taro)
+编译之后有问题，所以暂时采取复制文件到项目中的方式：
+
+文件：[https://github.com/yezihaohao/react-qmap/blob/master/examples/src/components/maps/TaroQMap.js](https://github.com/yezihaohao/react-qmap/blob/master/examples/src/components/maps/TaroQMap.js)
+```js
+// 复制文件到相应的目录，例如当前文件目录
+// taro对应的文件代码中使用
+import TaroQMap from './TaroQMap';
+
+{process.env.TARO_ENV === 'h5' && (
+    <View style={{ height: 500, width: 500 }}>
+        <TaroQMap 
+            center={{latitude: 30.53786, longitude: 104.07265}} 
+            mySpot={{latitude: 30.53786, longitude: 104.07265}}
+            apiKey="xxxxx"
+        />
+    </View>
+)}
+```
 
 
 #### 关于
