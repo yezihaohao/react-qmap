@@ -1,6 +1,6 @@
 {
   "name": "react-qmap",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "react qqmap component",
   "keywords": ["react", "map", "react-map"],
   "homepage": "https://github.com/yezihaohao/react-qmap",
@@ -18,11 +18,13 @@
   },
   "author": "chenghao",
   "license": "MIT",
-  "dependencies": {
+  "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
+  },
+  "dependencies": {
     "prop-types": "^15.6.1"
   }
 }
