@@ -1,28 +1,28 @@
 # react-qmap -- React腾讯地图组件
 
 #### 一个对腾讯web地图简单封装的React组件
- **GitHub源码地址：[戳我](https://github.com/yezihaohao/react-qmap)** 
+ **GitHub源码地址：[戳我](https://github.com/yezihaohao/react-qmap)**
 
  **栗子：[戳我](https://cheng_haohao.gitee.io/reactqmap/#/dashboard)**
 
- **栗子源码：[戳我](https://github.com/yezihaohao/react-qmap/tree/master/examples/src/components/maps)**  
+ **栗子源码：[戳我](https://github.com/yezihaohao/react-qmap/tree/master/examples/src/components/maps)**
 
 ![demo截图](https://raw.githubusercontent.com/yezihaohao/react-qmap/master/examples/src/styles/t.gif)
 
  **安装**
 ```
-yarn add react-qmap  
+yarn add react-qmap
 or npm install react-qmap
 ```
 
- **基础用法** 
+ **基础用法**
 
 ```
 import ReactQMap from 'react-qmap';
 
-<ReactQMap 
-    center={{latitude: 30.53786, longitude: 104.07265}} 
-    initialOptions={{zoomControl: true, mapTypeControl: true}} 
+<ReactQMap
+    center={{latitude: 30.53786, longitude: 104.07265}}
+    initialOptions={{zoomControl: true, mapTypeControl: true}}
     apiKey="xxxxxx-xxxxx-xxxxx-xxxxxx"
     style={{height: 300}}    // 高度和宽度默认占父元素的100%
 />
@@ -39,6 +39,7 @@ initialOptions   | object| false | zoom: 14,disableDefaultUI: true, zoomControl:
 apiKey   | string| true |  |  设置地图引用的key,为防止限制调用API,建议[官网](http://lbs.qq.com/index.html)申请自己的key
 center   | object| true |  |  设置地图初始化的中心位置坐标
 getContainer   | function| false |  |  获取地图的html dom元素的函数，参数是当前地图挂载的元素DOM
+libraries   | array| false |  |  设置地图的libraries库，支持数组传多个库，[示例](https://react-qmap.yezihaohao.vercel.app/#/drawing)，其他具体库的用法请参考官网
 
 #### 其他框架和库的支持
 
@@ -53,8 +54,8 @@ import TaroQMap from './TaroQMap';
 
 {process.env.TARO_ENV === 'h5' && (
     <View style={{ height: 500, width: 500 }}>
-        <TaroQMap 
-            center={{latitude: 30.53786, longitude: 104.07265}} 
+        <TaroQMap
+            center={{latitude: 30.53786, longitude: 104.07265}}
             mySpot={{latitude: 30.53786, longitude: 104.07265}}
             apiKey="xxxxx"
         />

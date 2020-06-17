@@ -5128,10 +5128,10 @@ react-error-overlay@^4.0.0:
   version "4.0.0"
   resolved "http://registry.npm.taobao.org/react-error-overlay/download/react-error-overlay-4.0.0.tgz#d198408a85b4070937a98667f500c832f86bd5d4"
 
-react-qmap@^0.1.7-12855251s:
-  version "0.1.7-12855251s"
-  resolved "https://registry.npmjs.org/react-qmap/-/react-qmap-0.1.7-12855251s.tgz#52d311c3611b307f4047219169b3cbd9e8a67032"
-  integrity sha512-E4bsFmK7br5PuUuNvnscHsuC8q7GQLyew/VBTHSWP1GciZAL1mtGCg4vp9g3KOg7d+3E26oYpuZgJDhi4QnF7A==
+react-qmap@^0.1.8:
+  version "0.1.8"
+  resolved "https://registry.npmjs.org/react-qmap/-/react-qmap-0.1.8.tgz#fc413595970eae0a2016b4681db6d0f17ced910f"
+  integrity sha512-zcGR0bxdPXlf2RfMLfigulUTVLkO3zvH/7I1R9dyNqYUYkhCghgLKWvM8fTvgiQ8YiYjUDgPSPO9QOmlDj6Fjg==
   dependencies:
     prop-types "^15.6.1"
 
