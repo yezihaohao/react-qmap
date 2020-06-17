@@ -5,6 +5,7 @@ import BasicMap from '../components/maps/BasicMap';
 import MapWithSpot from '../components/maps/MapWithSpot';
 import MapWithMarker from '../components/maps/MapWithMarker';
 import MapWithGeolocation from '../components/maps/MapWithGeolocation';
+import LibraryDraw from "../components/maps/LibraryDraw";
 
 class Routes extends Component {
     render() {
@@ -17,6 +18,7 @@ class Routes extends Component {
                     <Route exact path="/spot" component={MapWithSpot} />
                     <Route exact path="/marker" component={MapWithMarker} />
                     <Route exact path="/geolocation" component={MapWithGeolocation} />
+                    <Route exact path="/drawing" component={LibraryDraw} />
                 </Switch>
             </Router>
         )

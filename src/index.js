@@ -30,8 +30,8 @@ class ReactQMap extends Component {
         // 清除所有的监听器
         this.map && QMap.event.clearListeners(this.map);
     }
-    _addScript = () => {   
-        const { windowMap, apiKey } = this.props;         
+    _addScript = () => {
+        const { windowMap, apiKey, libraries = [] } = this.props;
         const getScript = (src) => {
             const protocol = (window.location.protocol == "https:") ? "https://" : "http://";
             src = protocol + src;
@@ -39,9 +39,9 @@ class ReactQMap extends Component {
             script.type = 'text/javascript';
             script.async = true;
             script.src = src;
+            script.crossOrigin = true;
             document.body.appendChild(script);
             script.onload = () => {     // js加载以后
-                // console.log(window.qq.maps);
                 QMap = window.qq.maps;
                 checkCenter(this.props.center) && this._initMap(this.props);
             }
@@ -49,9 +49,11 @@ class ReactQMap extends Component {
         const loadScriptTime = (new Date).getTime();
         qq.maps.__load = function (apiLoad) {
             delete qq.maps.__load;
-            apiLoad([["2.4.85", apiKey, 0],["open.map.qq.com/","apifiles/2/4/85/mods/","open.map.qq.com/apifiles/2/4/85/theme/",true],[1,18,34.519469,104.461761,4],[1519918617710,"pr.map.qq.com/pingd","pr.map.qq.com/pingd"],["apis.map.qq.com/jsapi","apikey.map.qq.com/mkey/index.php/mkey/check","sv.map.qq.com/xf","sv.map.qq.com/boundinfo","sv.map.qq.com/rarp","apis.map.qq.com/api/proxy/search","apis.map.qq.com/api/proxy/routes/","confinfo.map.qq.com/confinfo"],[[null,["rt0.map.gtimg.com/tile","rt1.map.gtimg.com/tile","rt2.map.gtimg.com/tile","rt3.map.gtimg.com/tile"],"png",[256,256],3,19,"114",true,false],[null,["m0.map.gtimg.com/hwap","m1.map.gtimg.com/hwap","m2.map.gtimg.com/hwap","m3.map.gtimg.com/hwap"],"png",[128,128],3,18,"110",false,false],[null,["p0.map.gtimg.com/sateTiles","p1.map.gtimg.com/sateTiles","p2.map.gtimg.com/sateTiles","p3.map.gtimg.com/sateTiles"],"jpg",[256,256],1,19,"101",false,false],[null,["rt0.map.gtimg.com/tile","rt1.map.gtimg.com/tile","rt2.map.gtimg.com/tile","rt3.map.gtimg.com/tile"],"png",[256,256],1,19,"",false,false],[null,["sv0.map.qq.com/hlrender/","sv1.map.qq.com/hlrender/","sv2.map.qq.com/hlrender/","sv3.map.qq.com/hlrender/"],"png",[256,256],1,19,"",false,false],[null,["rtt2.map.qq.com/rtt/","rtt2a.map.qq.com/rtt/","rtt2b.map.qq.com/rtt/","rtt2c.map.qq.com/rtt/"],"png",[256,256],1,19,"",false,false],null,[["rt0.map.gtimg.com/vector/","rt1.map.gtimg.com/vector/","rt2.map.gtimg.com/vector/","rt3.map.gtimg.com/vector/"],[256,256],3,18,"114",["rt0.map.gtimg.com/icons/","rt1.map.gtimg.com/icons/","rt2.map.gtimg.com/icons/","rt3.map.gtimg.com/icons/"]],null],["s.map.qq.com/TPano/v1.1.2/TPano.js","map.qq.com/",""]],loadScriptTime);
+            apiLoad([["2.4.132", apiKey, 0],["https://mapapi.qq.com/","jsapi_v2/2/4/132/mods/","https://mapapi.qq.com/jsapi_v2/2/4/132/theme/",true],[1,18,34.519469,104.461761,4],[1592153320230,"https://pr.map.qq.com/pingd","https://pr.map.qq.com/pingd"],["https://apis.map.qq.com/jsapi","https://apikey.map.qq.com/mkey/index.php/mkey/check","https://sv.map.qq.com/xf","https://sv.map.qq.com/boundinfo","https://sv.map.qq.com/rarp","https://apis.map.qq.com/api/proxy/search","https://apis.map.qq.com/api/proxy/routes/","https://confinfo.map.qq.com/confinfo","https://overseactrl.map.qq.com"],[[null,["https://rt0.map.gtimg.com/tile","https://rt1.map.gtimg.com/tile","https://rt2.map.gtimg.com/tile","https://rt3.map.gtimg.com/tile"],"png",[256,256],3,19,"114",true,false],[null,["https://m0.map.gtimg.com/hwap","https://m1.map.gtimg.com/hwap","https://m2.map.gtimg.com/hwap","https://m3.map.gtimg.com/hwap"],"png",[128,128],3,18,"110",false,false],[null,["https://p0.map.gtimg.com/sateTiles","https://p1.map.gtimg.com/sateTiles","https://p2.map.gtimg.com/sateTiles","https://p3.map.gtimg.com/sateTiles"],"jpg",[256,256],1,19,"101",false,false],[null,["https://rt0.map.gtimg.com/tile","https://rt1.map.gtimg.com/tile","https://rt2.map.gtimg.com/tile","https://rt3.map.gtimg.com/tile"],"png",[256,256],1,19,"",false,false],[null,["https://sv0.map.qq.com/hlrender/","https://sv1.map.qq.com/hlrender/","https://sv2.map.qq.com/hlrender/","https://sv3.map.qq.com/hlrender/"],"png",[256,256],1,19,"",false,false],[null,["https://rtt2.map.qq.com/rtt/","https://rtt2a.map.qq.com/rtt/","https://rtt2b.map.qq.com/rtt/","https://rtt2c.map.qq.com/rtt/"],"png",[256,256],1,19,"",false,false],null,[["https://rt0.map.gtimg.com/vector/","https://rt1.map.gtimg.com/vector/","https://rt2.map.gtimg.com/vector/","https://rt3.map.gtimg.com/vector/"],[256,256],3,18,"114",["https://rt0.map.gtimg.com/icons/","https://rt1.map.gtimg.com/icons/","https://rt2.map.gtimg.com/icons/","https://rt3.map.gtimg.com/icons/"],[]],null],["https://s.map.qq.com/TPano/v1.1.2/TPano.js","map.qq.com/",""]],loadScriptTime);
         };
-        getScript("open.map.qq.com/apifiles/2/4/85/main.js");
+        const scripts = ['main', ...libraries.map(l => `mods/${l}`)];
+        const prefix = 'jsapi_v2/2/4/132/';
+        getScript("mapapi.qq.com/c/=/" + scripts.map(s => `${prefix}${s}.js`).join(','));
     }
     _initMap = (props) => {
         const { center, getMap, initialOptions, mySpot, getContainer } = props;
@@ -76,13 +78,13 @@ class ReactQMap extends Component {
             size = new QMap.Size(32, 32),
             sizeSm = new QMap.Size(22, 22),
             origin = new QMap.Point(0, 0);
-        return new QMap.MarkerImage(icon, sizeSm, origin, anchor, sizeSm);  
+        return new QMap.MarkerImage(icon, sizeSm, origin, anchor, sizeSm);
     }
     render() {
         const { className, style } = this.props;
         return (
-            <div 
-                ref={div => this.container = div} 
+            <div
+                ref={div => this.container = div}
                 style={{width: '100%', height: '100%', ...style}}
                 {...{className}}
             />
@@ -99,6 +101,7 @@ ReactQMap.propTypes = {
     apiKey: PropTypes.string.isRequired,
     center: PropTypes.object.isRequired,
     getContainer: PropTypes.func,
+    libraries: PropTypes.array,
 }
 
 export default ReactQMap;

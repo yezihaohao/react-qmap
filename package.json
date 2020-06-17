@@ -1,14 +1,14 @@
 {
   "name": "react-qmap",
-  "version": "0.1.6",
+  "version": "0.1.8",
   "description": "react qqmap component",
   "keywords": ["react", "map", "react-map"],
   "homepage": "https://github.com/yezihaohao/react-qmap",
   "bugs": {
     "url": "https://github.com/yezihaohao/react-qmap/issues"
   },
-  "repository" :{ 
-    "type" : "git", 
+  "repository" :{
+    "type" : "git",
     "url" : "https://github.com/yezihaohao/react-qmap"
   },
   "main": "index.js",

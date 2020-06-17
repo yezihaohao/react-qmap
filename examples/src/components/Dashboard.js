@@ -9,6 +9,7 @@ class Dashboard extends Component {
             {name: '附带定位地图', path: '/spot'},
             {name: '附带标记地图', path: '/marker'},
             {name: '浏览器定位地图', path: '/geolocation'},
+            {name: '绘图Library', path: '/drawing'},
         ]
     }
     render() {
